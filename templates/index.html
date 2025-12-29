@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>映画推薦システム</title>
+</head>
+<body>
+  <h2>お好きな映画を3つ選択してください</h2>
+
+  <form action="/recommend" method="post">
+    <p>1つ目の映画：</p>
+    <select name="movie">
+      <option value="">映画を選択してください</option>
+      {% for m in movies %}
+        <option value="{{ m.movieId }}">{{ m.title }}</option>
+      {% endfor %}
+    </select>
+
+    <p>2つ目の映画：</p>
+    <select name="movie">
+      <option value="">映画を選択してください</option>
+      {% for m in movies %}
+        <option value="{{ m.movieId }}">{{ m.title }}</option>
+      {% endfor %}
+    </select>
+
+    <p>3つ目の映画：</p>
+    <select name="movie">
+      <option value="">映画を選択してください</option>
+      {% for m in movies %}
+        <option value="{{ m.movieId }}">{{ m.title }}</option>
+      {% endfor %}
+    </select>
+
+    <br><br>
+    <button type="submit">オススメ映画を表示</button>
+  </form>
+</body>
+</html>

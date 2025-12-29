@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>おすすめ結果</title>
+</head>
+<body>
+  <h2 style="color:green;">オススメ映画トップ5</h2>
+
+  <ol>
+    {% for m in movies %}
+      <li>{{ m }}</li>
+    {% endfor %}
+  </ol>
+
+  <a href="/">戻る</a>
+</body>
+</html>
